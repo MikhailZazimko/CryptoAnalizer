@@ -2,6 +2,7 @@ package ru.javarush.zazimko.cryptoanalizer;
 
 public class Runner {
     public static void main(String[] args) {
-        System.out.println("Hello");
+        MyFileReader one=new MyFileReader();
+        one.reader();
     }
 }
