@@ -2,9 +2,7 @@ package ru.javarush.zazimko.cryptoanalizer;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class MyFileReader {
 
@@ -16,7 +14,7 @@ public class MyFileReader {
                 char read = (char) fileReader.read();
                 textFromFile.add(read);
             }
-            //System.out.print(textFromFile);
+          //  System.out.print(textFromFile);
         } catch (IOException| NullPointerException e) {
             System.out.println("Не найден файл для чтения");
         }
