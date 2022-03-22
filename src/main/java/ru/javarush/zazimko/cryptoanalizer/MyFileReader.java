@@ -6,10 +6,9 @@ import java.util.*;
 
 public class MyFileReader {
 
-    public List<Character> reader() {
-        System.out.println("Введите адрес файла для чтения");
+    public List<Character> reader(String path) {
         List<Character> textFromFile = new ArrayList<>();
-        try (Scanner scanner = new Scanner(System.in); FileReader fileReader = new FileReader(scanner.nextLine())) {
+        try (FileReader fileReader = new FileReader(path)) {
             while (fileReader.ready()) {
                 char read = (char) fileReader.read();
                 textFromFile.add(read);
