@@ -31,6 +31,11 @@ public class BruteForce {
                 }
             }
         }
+        textMatcher(source, pathWrite, finalText);
+
+    }
+
+    private static void textMatcher(String source, String pathWrite, List<Character> finalText) {
         StringBuilder encodeString=new StringBuilder();
         for (Character character : finalText) {
           encodeString.append(character);
@@ -40,11 +45,10 @@ public class BruteForce {
         Matcher matcher = compile.matcher(encodeString);
         if(matcher.find()){
             MyFileWriter myFileWriter = new MyFileWriter();
-            myFileWriter.writer(finalText,pathWrite);
+            myFileWriter.writer(finalText, pathWrite);
         }else {
             key++;
             decode(source, pathWrite);
         }
-
     }
 }
