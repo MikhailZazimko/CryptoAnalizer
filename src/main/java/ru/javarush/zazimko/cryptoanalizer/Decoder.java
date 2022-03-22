@@ -11,7 +11,7 @@ public class Decoder {
             path="C:\\test\\new\\decode.txt";
         }
         if (source==null||source==" "){
-            path="C:\\test\\new\\file1.txt";
+            source="C:\\test\\new\\file1.txt";
         }
         MyFileReader myFileReader = new MyFileReader();
         List<Character> originalText =myFileReader.reader(source);

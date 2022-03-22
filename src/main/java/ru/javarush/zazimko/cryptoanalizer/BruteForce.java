@@ -9,10 +9,17 @@ import static java.lang.Math.abs;
 
 public class BruteForce {
     public static int key=0;
-    public static void decode(String path,String pathWrite) {
+
+    public static void decode(String source, String pathWrite) {
+        if (source==null||source==" "){
+            source="C:\\test\\new\\decode.txt";
+        }
+        if(pathWrite==null||pathWrite==" "){
+            pathWrite="C:\\test\\new\\BruteForce.txt";
+        }
         List<Character> finalText=new ArrayList<>();
         MyFileReader myFileReader = new MyFileReader();
-        List<Character> encodeText = myFileReader.reader(path);
+        List<Character> encodeText = myFileReader.reader(source);
         for (char a : encodeText) {
             for (int j = 0; j < Alphabet.abc.length; j++) {
                 if (a == Alphabet.abc[j]) {
@@ -36,7 +43,7 @@ public class BruteForce {
             myFileWriter.writer(finalText,pathWrite);
         }else {
             key++;
-            decode(path, pathWrite);
+            decode(source, pathWrite);
         }
 
     }

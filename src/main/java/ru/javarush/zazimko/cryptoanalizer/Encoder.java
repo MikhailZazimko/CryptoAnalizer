@@ -7,11 +7,11 @@ import static java.lang.Math.abs;
 
 public class Encoder {
     public static void encode(String source,int key, String path) {
-        if(path==null||path==" "){
-            path="C:\\test\\new\\encode.txt";
+        if(source==null||source==" "){
+            source="C:\\test\\new\\decode.txt";
         }
-        if (source==null||source==" "){
-            path="C:\\test\\new\\decode.txt";
+        if (path==null||path==" "){
+            path="C:\\test\\new\\encode.txt";
         }
         MyFileReader myFileReader = new MyFileReader();
         List<Character> Text =myFileReader.reader(source);
